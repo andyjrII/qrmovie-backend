@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: 'https://movie-generator.onrender.com',
     credentials: true,
     methods: ['GET', 'DELETE'],
     preflightContinue: false,
