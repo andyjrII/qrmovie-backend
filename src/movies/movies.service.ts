@@ -5,7 +5,7 @@ export class MoviesService {
     constructor(private prisma: PrismaService) { }
 
     async getMovies(id: string): Promise<any> {
-        const movieList = await this.prisma.MovieList.findUnique({
+        const movieList = await this.prisma.movielist.findUnique({
             where: { id }
         });
         if (!movieList) throw new ForbiddenException(`Invalid URL`);

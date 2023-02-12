@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model MovieList {
+model Movielist {
   id     String @id @default(uuid())
   movies Json
 }

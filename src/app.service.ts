@@ -34,7 +34,7 @@ export class AppService {
       }
     }
     //Save the movies to the database
-    const movieList = await this.prisma.MovieList.create({
+    const movieList = await this.prisma.movielist.create({
       data: {
         movies
       }
