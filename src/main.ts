@@ -6,9 +6,10 @@ async function bootstrap() {
   app.enableCors({
     origin: 'https://movie-generator.onrender.com',
     credentials: true,
-    methods: ['GET', 'DELETE'],
+    methods: ['GET', 'DELETE', 'POST', 'PUT'],
     preflightContinue: false,
-    maxAge: 86400
+    maxAge: 86400,
+    allowedHeaders: ['Content-Type', 'Authorization']
   });
   await app.listen(process.env.PORT);
 }
