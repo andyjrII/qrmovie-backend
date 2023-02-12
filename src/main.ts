@@ -10,6 +10,6 @@ async function bootstrap() {
     preflightContinue: false,
     maxAge: 86400
   });
-  await app.listen(3001);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
