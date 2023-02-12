@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "env": {
+        "DATABASE_URL": "postgres://uelpanvl:6DyZUX3e3GpE6zLi0ePe2MI68gcznuoS@rogue.db.elephantsql.com/uelpanvl",
+        "BASE_URL": "https://movie-generator.onrender.com/"
+    },
+    "builds": [
+        {
+            "src": "src/main.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/main.ts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}
